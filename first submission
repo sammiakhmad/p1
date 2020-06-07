@@ -1,0 +1,102 @@
+# nama file p1.py 
+# Isikan email anda dan copy semua cell code yang dengan komentar #Graded
+
+# untuk revisi dan resubmisi sebelum deadline
+# silakan di resubmit dengan nilai variable priority yang lebih besar dari
+# nilai priority submisi sebelumnya
+# JIKA TIDAK ADA VARIABLE priority DIANGGAP priority=0
+priority = 0
+
+#netacad email cth: 'abcd@gmail.com'
+email='sammyafauzan@gmail.com'
+ 
+# copy-paste semua #Graded cells YANG SUDAH ANDA KERJAKAN di bawah ini
+
+#Graded
+
+# Manual, filter, list comprehension
+def letter_catalog(items,letter='A'):
+  pass
+  # MULAI KODEMU DI SINI
+  b = []
+  for i in items:
+    a = []
+    for j in i:
+      a.append(j)
+      
+    if a[0] == letter:
+      b.append(i)
+      
+  return b
+
+#Graded
+
+def counter_item(items):
+  pass
+  # MULAI KODEMU DI SINI
+  d = {}
+  a = []
+  for i in items:
+    if i not in a:
+      a.append(i)
+  
+  for j in a:
+    c = 0
+    for k in items:
+      if k == j:
+        c = c+1
+    d[j] = c
+  
+  return d
+
+#Graded
+
+# dua variable berikut jangan diubah
+fruits = ['Apple','Avocado','Banana','Blackberries','Blueberries','Cherries','Date Fruit','Grapes','Guava','Jackfruit','Kiwifruit']
+prices = [6,5,3,10,12,7,14,15,8,7,9]
+
+# list buah
+chart = ['Blueberries','Blueberries','Grapes','Apple','Apple','Apple','Blueberries','Guava','Jackfruit','Blueberries','Jackfruit']
+
+# MULAI KODEMU DI SINI
+fruit_price = {}
+for i in range(len(fruits)):
+	fruit_price[fruits[i]]=prices[i]
+
+def total_price(dcounter,fprice):
+  pass
+  # MULAI KODEMU DI SINI
+  sum = 0
+  for i in fprice:
+    for j in dcounter:
+      if i==j:
+        sum += fprice[i]*dcounter[j]
+  
+  return sum
+
+#Graded
+
+def discounted_price(total,discount,minprice=100):
+  pass
+  # MULAI KODEMU DI SINI
+  a = 0
+  if total < minprice:
+    a = total
+  else:
+    a = total * (1-discount/100)
+  
+  return a
+
+#Graded
+
+def print_summary(items,fprice):
+  pass
+  # MULAI KODEMU DI SINI
+  a = counter_item(items)
+  b = total_price(a,fprice)
+  c = total_price(a,fprice)
+  d = discounted_price(c,10,100)
+  for i in sorted(a):
+    print(a[i],i,":",a[i]*fprice[i])
+  print("total :",c)
+  print("discount price :",d)
